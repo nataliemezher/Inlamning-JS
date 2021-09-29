@@ -1,0 +1,260 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  background-color: rgb(250, 250, 250);
+}
+
+/*nav css*/
+.navmenu {
+  display: flex;
+  background-color: rgb(46, 42, 42);
+  font-size: 1.6em;
+  padding: 10px 10px;
+  justify-content: space-between;
+}
+
+.divul-pages {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+.divul-pages li {
+  display: inline;
+}
+
+.navmenu li a {
+  text-decoration: none;
+  color: rgb(243, 243, 243);
+  padding: 1rem;
+}
+
+.navmenu li:hover {
+  background-color: rgb(77, 77, 77);
+}
+.navmenu .header:hover {
+  background-color: rgb(77, 77, 77);
+}
+.header a {
+  text-decoration: none;
+  color: rgb(243, 243, 243);
+}
+.material-icons {
+  color: rgb(114, 102, 102);
+}
+.wrapcontent {
+  min-height: 100vh;
+}
+
+@media screen and (max-width: 648px) {
+  .line {
+    width: 25px;
+    height: 2.25px;
+    background-color: rgb(243, 243, 243);
+    margin: 2.5px;
+  }
+  nav {
+    position: relative;
+    height: 1.5vh;
+  }
+  .ham {
+    position: absolute;
+    cursor: pointer;
+    right: 5%;
+    top: 30%;
+  }
+  .divul-pages {
+    position: fixed;
+    color: rgb(171, 171, 189);
+    height: 60%;
+    width: 100%;
+    flex-direction: column;
+    display: none;
+  }
+
+  footer {
+    width: 100%;
+    font-size: 12px;
+  }
+  img {
+    height: 100%;
+    width: 100%;
+  }
+  .content-p2 {
+    font-size: 85%;
+  }
+  .galleria > img {
+    width: 100%;
+    height: 100%;
+  }
+}
+
+@media screen and (max-width: 900px) {
+  .navmenu {
+    font-size: 1.1em;
+  }
+}
+
+.content-p4 {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  padding: 15px;
+}
+.about-content {
+  font-size: 20px;
+}
+.hobby-content {
+  padding: 50px;
+}
+/* sida 1*/
+.container {
+  display: grid;
+  grid-template-columns: 1fr 5fr;
+}
+.main-content {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 50px;
+}
+.main-content h4 {
+  text-decoration: underline;
+}
+.main-content h2 {
+  background-color: palegoldenrod;
+}
+.aside-text {
+  margin: 10px;
+  padding: 10px;
+}
+.aside-text > div {
+  font-style: oblique;
+  padding: 30px;
+  text-align: center;
+}
+.tips-spel1 {
+  max-width: 360px;
+  border: solid black 2px;
+  padding: 4px;
+}
+.tips-bok {
+  max-width: 360px;
+  border: solid black 2px;
+  padding: 4px;
+}
+.tips-serier {
+  max-width: 360px;
+  border: solid black 2px;
+  padding: 4px;
+}
+.tips-växter {
+  max-width: 360px;
+  border: solid black 2px;
+  padding: 4px;
+}
+
+/* sida 2 */
+.content-p2 {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  margin: auto;
+}
+.aside-artiklarmeny {
+  grid-row: 1;
+  display: flex;
+  flex-direction: column;
+  margin: 10px;
+  padding: 10px;
+}
+.aside-artiklarmeny > a {
+  font-style: oblique;
+  padding: 30px;
+}
+
+article {
+  background-color: white;
+  width: fit-content;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+}
+.article-block {
+  padding: 10px;
+}
+
+.galleria {
+  display: flex;
+  width: 100%;
+  flex-wrap: wrap;
+  justify-content: center;
+  padding: 10px 10px;
+}
+.galleria > img {
+  width: 400px;
+  height: 475px;
+  object-fit: cover;
+  border: 10px double rgba(255, 167, 211, 0.94);
+}
+
+/* form contact sida */
+.contact-container {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: url("img/ladycindypic.jpg") no-repeat center;
+  background-size: cover;
+}
+
+.contact-box {
+  max-width: 400px;
+  text-align: center;
+  padding-bottom: 50px;
+
+  background-color: rgb(32, 32, 32, 0.7);
+}
+
+.field {
+  width: 80%;
+  padding: 10px 15px;
+  margin-bottom: 20px;
+}
+
+.butt {
+  width: 50%;
+  padding: 10px;
+  font-size: 100%;
+  background-color: rgb(221, 221, 221);
+  border: none;
+  outline: none;
+  cursor: pointer;
+}
+/* Enskild sida för en artikel*/
+.blog-enskild-artikel {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  padding: 30px 30px;
+}
+.recept-st2 > p {
+  padding-left: 50px;
+}
+
+/* footer css*/
+
+footer {
+  display: grid;
+  bottom: 0;
+  grid-template-columns: repeat(3, 1fr);
+  background-color: rgb(46, 42, 42);
+  color: rgb(243, 243, 243);
+}
+footer li {
+  list-style-type: none;
+}
+footer a {
+  color: rgb(194, 194, 194);
+}
+footer a:hover {
+  color: white;
+}

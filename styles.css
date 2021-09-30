@@ -71,6 +71,21 @@ body {
     flex-direction: column;
     display: none;
   }
+  .aside-text > div {
+    width: fit-content;
+    font-size: 80%;
+  }
+  .main-content {
+    width: 80%;
+    font-size: 85%;
+    flex-wrap: wrap;
+  }
+  .content-p4 > div {
+    font-size: 80%;
+  }
+
+  .content-p2 {
+  }
 
   footer {
     width: 100%;
@@ -109,13 +124,13 @@ body {
 /* sida 1*/
 .container {
   display: grid;
-  grid-template-columns: 1fr 5fr;
+  grid-template-columns: 1fr 4fr;
 }
 .main-content {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  gap: 50px;
+  gap: 20px;
 }
 .main-content h4 {
   text-decoration: underline;
@@ -123,13 +138,9 @@ body {
 .main-content h2 {
   background-color: palegoldenrod;
 }
-.aside-text {
-  margin: 10px;
-  padding: 10px;
-}
 .aside-text > div {
   font-style: oblique;
-  padding: 30px;
+  padding: 20px;
   text-align: center;
 }
 .tips-spel1 {
@@ -155,20 +166,23 @@ body {
 
 /* sida 2 */
 .content-p2 {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  margin: auto;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 180px;
 }
 .aside-artiklarmeny {
-  grid-row: 1;
-  display: flex;
-  flex-direction: column;
+  align-items: center;
   margin: 10px;
   padding: 10px;
 }
-.aside-artiklarmeny > a {
+.aside-artiklarmeny > div {
+  background-color: khaki;
+  margin: 20px;
   font-style: oblique;
-  padding: 30px;
+  padding: 10px;
+  text-decoration: none;
+  font-size: 20px;
 }
 
 article {

@@ -196,15 +196,17 @@ article {
 }
 
 /* form contact sida */
+
 .contact-container {
-  position: relative;
+  position: absolute;
   width: 100%;
-  height: 100vh;
+  height: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
   background: url("img/ladycindypic.jpg") no-repeat center;
   background-size: cover;
+  z-index: -1; /* bakgrundsbild går ej över footer nu*/
 }
 
 .contact-box {

@@ -1,0 +1,65 @@
+[
+    {
+        "id": "picone",
+        "title" : "Calathea",
+        "description" :	"Bildtext",
+        "url" :	"./img/växt1.jpg",
+        "alt" :	"bild på en grön växt"
+    },
+    {
+        "id": "pictwo",
+        "title" : "Philodendron brasil",
+        "description" :	"Bildtext",
+        "url" :	"./img/växt2.jpg",
+        "alt" :	"bild på en grön växt"
+    },
+    {
+        "id": "picthree",
+        "title" : "Moses stentavlor",
+        "description" :	"Bildtext",
+        "url" :	"./img/växt4.jpg",
+        "alt" :	"bild på en grön växt"
+    },
+    {
+        "id": "picfour",
+        "title" : "En sandsopp",
+        "description" :	"Bildtext",
+        "url" :	"./img/svamp1.jpg",
+        "alt" :	"bild på svamp"
+    },
+    {
+        "id": "picfive",
+        "title" : "En Karl johan med snylting",
+        "description" :	"Bildtext",
+        "url" :	"./img/svamp2.jpg",
+        "alt" :	"bild på svamp"
+    },
+    {
+        "id": "picsix",
+        "title" : "Squash",
+        "description" :	"Bildtext",
+        "url" :	"./img/odling.jpg",
+        "alt" :	"bild på squash"
+    },
+    {
+        "id": "picseven",
+        "title" : "Örkelljungas stenbrott",
+        "description" :	"Bildtext",
+        "url" :	"./img/orkelljunga.jpg",
+        "alt" :	"bild på stenbrott"
+    },
+    {
+        "id": "piceight",
+        "title" : "Bild på Lady",
+        "description" :	"Bildtext",
+        "url" :	"./img/ladyblomma.jpg",
+        "alt" :	"Bild på en hund"
+    },
+    {
+        "id": "picnine",
+        "title" : "Strand i Båstad",
+        "description" :	"Bildtext",
+        "url" :	"./img/båstad1.jpg",
+        "alt" :	"Bild på strand i Båstad"
+    }
+]

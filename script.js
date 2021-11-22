@@ -1,4 +1,4 @@
-fetch("/InlamningsprojektSEPT/galleria.json")
+fetch("./galleria.json")
   .then(function (response) {
     return response.json();
   })

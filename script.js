@@ -12,12 +12,8 @@ let popUpWindow = document.querySelector(".popupwindow");
 let closeBtn = document.querySelector(".close-btn");
 closeBtn.addEventListener("click", closePopUpWindow);
 
-//for loop som går igenom json objekt
 function createPic(picture) {
-  //picture är data (från fetch)
   picture.forEach((pic) => {
-    //pic child till picture
-
     let divTag = document.createElement("div");
     let imageTag = document.createElement("img");
     let imageCaption = document.createElement("p");
@@ -35,9 +31,6 @@ function createPic(picture) {
 }
 
 function clickOnImagePopUp(url, title) {
-  // console.log('clicked');
-  // let imageTagInPopUp = document.createElement('img');
-
   let imageTagInPopUp = document.createElement("img");
   let imageCaption = document.createElement("p");
 

@@ -31,25 +31,22 @@ function getBlogFeed($userid)
              <div>
                <p class='blogdesc'>$blogposts->description</p>
              </div>
+
+             <div class='editpost'>
+               
+
+               <form action='./includes/hidepost.php' method='POST'> 
+                  <input type='submit' name='hidepost' value='göm inlägg' >
+                </form>
+
+                <form action='./includes/editpost.php' method='POST'> 
+                  <input type='submit' name='edit' value='Redigera inlägg' >
+                </form>
+
+             </div>
         </div>
-        <hr>
+        
         
         ";
     }
 }
-
-
-/*
-function isUserloggedIn()
-{
-
-    $loggedInUser = $_SESSION['username'];
-    $loggedInID = $_SESSION['userid'];
-
-    if (!isset($loggedInUser)) {
-        header("Location: InlamningsprojektSEPT/loginpage.php");
-    } else {
-        header("InlamningsprojektSEPT/index.php");
-    }
-}
-*/

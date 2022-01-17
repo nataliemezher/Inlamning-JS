@@ -12,6 +12,17 @@ $loggedInID = $_SESSION['user']['id'];
 
     <?php
     getBlogFeed($loggedInID);
+    if (isset($_POST['hidepost'])) {
+        echo "<form action='./includes/editpost.php' method='POST'> 
+        <input type='submit' name='edit' value='Redigera inlägg' >
+      </form>";
+    } else {
+        echo "
+        <form action='./includes/hidepost.php' method='POST'> 
+           <input type='submit' name='hidepost' value='göm inlägg' >
+         </form>";
+    }
+
 
     ?>
 

@@ -326,9 +326,13 @@ article {
   background-color: rgb(252, 238, 191);
 }
 .blogpost {
+  margin: 10px;
   margin-left: 1000px;
   margin-right: 1000px;
-  background-color: rgb(255, 255, 255)16, 116);
+  background-color: rgb(255, 255, 255);
+}
+.editpost {
+  text-align: right;
 }
 
 /* footer css*/

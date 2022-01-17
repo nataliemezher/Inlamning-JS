@@ -6,26 +6,35 @@ require("config.php");
 function getBlogFeed($userid)
 {
     $pdo = connection();
-    $stmt = $pdo->prepare('SELECT * FROM user INNER JOIN blogposts ON user.id = blogposts.userid WHERE user.id = :id');
-    $stmt->bindValue(':id', $userid);
-    $stmt->execute();
+    $stmnt = $pdo->prepare('SELECT * FROM blogposts WHERE userid = :userid 
+    ORDER BY time DESC');
+    //$stmnt = $pdo->prepare('SELECT * FROM user INNER JOIN blogposts ON user.id = blogposts.id WHERE user.id = :id');
+    $stmnt->bindValue(':userid', $userid);
+    $stmnt->execute();
 
-    $results =  $stmt->fetchAll(PDO::FETCH_ASSOC);
-
+    $results =  $stmnt->fetchAll(PDO::FETCH_OBJ);
+    $imagedir = "http://localhost/InlamningsprojektSEPT/users/";
 
     foreach ($results as $blogposts) {
 
-        echo "<div class=''>
-        <div class=''>
-           <h4>$blogposts->title</h4><p>$blogposts->time</p>
+        $path = $imagedir . $blogposts->image;
+        //echo "hej";
+
+        echo "
+        <div class='blogpost'>
+             <div>
+               <p class='blogtitle'> $blogposts->title </p>
+             </div>
+             <div>
+               <img src='$path' class='blogpic'  width='500' height='600' src='" . $blogposts->image . "'>
+             </div>
+             <div>
+               <p class='blogdesc'>$blogposts->description</p>
+             </div>
         </div>
-        <div class=''>
-           <img class='img-gallery' data-title='$blogposts->title' data-postid='$blogposts->postid' data-content='$blogposts->description' width='500' height='auto' src='" . $blogposts->image . "'>
-        </div>
-        <div>
-           <p><b>$blogposts->username:</b> $blogposts->description<p>
-        </div>
-        </div>";
+        <hr>
+        
+        ";
     }
 }
 

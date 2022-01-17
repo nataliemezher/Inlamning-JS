@@ -318,6 +318,18 @@ article {
   display: flex;
   flex-direction: column;
 }
+.blogpostspage {
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: rgb(252, 238, 191);
+}
+.blogpost {
+  margin-left: 1000px;
+  margin-right: 1000px;
+  background-color: rgb(255, 255, 255)16, 116);
+}
 
 /* footer css*/
 

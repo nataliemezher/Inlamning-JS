@@ -109,21 +109,21 @@ function editButton()
     echo "<form method=POST action=./eachblogpost.php?id=$results[postid]  ><input type=submit name=edit value=Redigera> </form>";
   }
   if (isset($_POST['edit'])) {
-    echo "   <div>
+    echo "   
+    <div class='postdiv'>
     <form action='./includes/editpost.php?id=$results[postid]' method='POST' class='update-form' >
-        <div>
-            <h3>Redigera</h3>
-        </div>
-        <div>
+     
+            <p>Redigera</p>
+           <div>
            <span>Titel</span> <input type='text' placeholder='$results[title]' name='title'>
-        </div>
-        <div>
-            <span>Text</span><input type='text' placeholder='$results[description]' name='description'>
-        </div>
-        
-        <div>
-            <input type='submit' name='update' value='Uppdatera'>
-        </div>
+           </div>
+           <div>
+            <span>Text </span><textarea type='text' placeholder='$results[description]' name='description'> </textarea>
+          </div>
+           <div class='updatebtn'>
+            <input  type='submit' name='update' value='Uppdatera'>
+           </div>
+    
     </form>
 </div>";
   }

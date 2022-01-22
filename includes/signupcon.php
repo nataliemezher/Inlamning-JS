@@ -38,7 +38,7 @@ if (isset($_POST['reg-user'])) {
         $stmt->bindValue('password', $hashed);
         $stmt->execute();
         mkdir($currentdir);
-        header("Location: ../index.php ");
+        header("Location: ../loginpage.php ");
     } else {
         $errorMsg = "Something else went wrong";
     }

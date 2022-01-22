@@ -313,10 +313,18 @@ article {
 .upload-page {
   display: flex;
   padding: 20px;
+  justify-content: center;
 }
 .upload-form {
   display: flex;
   flex-direction: column;
+}
+#uploadtitle {
+  width: 50%;
+}
+#uploaddesc {
+  height: 100px;
+  width: 100%;
 }
 .blogpostspage {
   margin: 0;
@@ -341,7 +349,13 @@ article {
 }
 .postbuttons {
   display: flex;
-  justify-content: space-around;
+}
+.postdiv {
+  padding: 20px;
+}
+.updatebtn {
+  display: flex;
+  justify-content: flex-end;
 }
 
 /* footer css*/

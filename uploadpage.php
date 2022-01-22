@@ -13,16 +13,19 @@ include("header.php");
                 <?php echo "<img width='480' height='280' src='" . $directory . $fileName . "'> "; ?>
             </div>
             <div>
-                <input type="file" name="file">
-            </div>
-            <div>
-                <input type="text" placeholder="Titel" name="title">
-            </div>
-            <div>
-                <input type="text" placeholder="Bildtext" name="description">
-            </div>
-            <div>
-                <button type="submit" name="submitupload">Ladda upp</button>
+                <div class="uploadinputs">
+                    <input type="file" name="file">
+                </div>
+                <div>
+                    <input id="uploadtitle" type="text" placeholder="Titel" name="title">
+                </div>
+                <div>
+                    <textarea id="uploaddesc" type="text" placeholder="Bildtext" name="description"></textarea>
+
+                </div>
+                <div>
+                    <button type="submit" name="submitupload">Ladda upp</button>
+                </div>
             </div>
         </form>
     </div>

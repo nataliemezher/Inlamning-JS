@@ -6,6 +6,11 @@ include("includes/functions-inc.php");
 $loggedInUser = $_SESSION['user']['username'];
 $loggedInID = $_SESSION['user']['userid'];
 
+/*
+*
+* username: Mikko  , Lösenord:  mikko123
+*
+*/
 //require("config.php");
 ?>
 

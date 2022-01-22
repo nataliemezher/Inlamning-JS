@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Värd: localhost:3306
--- Tid vid skapande: 16 jan 2022 kl 22:00
+-- Tid vid skapande: 22 jan 2022 kl 21:00
 -- Serverversion: 5.7.24
 -- PHP-version: 8.0.1
 
@@ -37,6 +37,28 @@ CREATE TABLE `blogposts` (
   `visible` tinyint(1) DEFAULT '1'
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
+--
+-- Dumpning av Data i tabell `blogposts`
+--
+
+INSERT INTO `blogposts` (`postid`, `image`, `title`, `userid`, `description`, `time`, `visible`) VALUES
+(1, 'Natalie/plantsPrayer.jpg', 'Prayer plants', 1, 'Cool text about plants', '2022-01-22 20:54:29', 1),
+(2, 'Natalie/plantsEp&sci.jpg', 'Plants this', 1, 'Plants that', '2022-01-22 20:58:38', 1);
+
+-- --------------------------------------------------------
+
+--
+-- Tabellstruktur `contact`
+--
+
+CREATE TABLE `contact` (
+  `id` int(11) NOT NULL,
+  `name` varchar(55) NOT NULL,
+  `email` varchar(100) NOT NULL,
+  `subject` varchar(55) NOT NULL,
+  `message` varchar(455) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
 -- --------------------------------------------------------
 
 --
@@ -51,6 +73,14 @@ CREATE TABLE `user` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
+-- Dumpning av Data i tabell `user`
+--
+
+INSERT INTO `user` (`id`, `username`, `email`, `password`) VALUES
+(1, 'Natalie', 'natalie@live.se', '$2y$10$JsaLlB5qtXTMKuV8C/TRAeTp4zpE4FYXC8/CdeWmC9Spg2Rt8zO4G'),
+(2, 'Mikko', 'mikko@live.se', '$2y$10$m.w4tvxFHColsK8CoJjISOBcDdvXaFsS0kGLwAp9Os/r6/o5c1wWq');
+
+--
 -- Index för dumpade tabeller
 --
 
@@ -60,6 +90,12 @@ CREATE TABLE `user` (
 ALTER TABLE `blogposts`
   ADD PRIMARY KEY (`postid`),
   ADD KEY `userid` (`userid`);
+
+--
+-- Index för tabell `contact`
+--
+ALTER TABLE `contact`
+  ADD PRIMARY KEY (`id`);
 
 --
 -- Index för tabell `user`
@@ -75,13 +111,19 @@ ALTER TABLE `user`
 -- AUTO_INCREMENT för tabell `blogposts`
 --
 ALTER TABLE `blogposts`
-  MODIFY `postid` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+  MODIFY `postid` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+
+--
+-- AUTO_INCREMENT för tabell `contact`
+--
+ALTER TABLE `contact`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
 
 --
 -- AUTO_INCREMENT för tabell `user`
 --
 ALTER TABLE `user`
-  MODIFY `id` int(250) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
+  MODIFY `id` int(250) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 
 --
 -- Restriktioner för dumpade tabeller

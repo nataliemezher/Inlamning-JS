@@ -1,8 +1,5 @@
 <?php
 session_start();
-//include("includes/logoutcon.php");
-//include("includes/logincon.php");
-
 $loggedinUser = $_SESSION['user']['username'];
 $loggedInID = $_SESSION['user']['id'];
 

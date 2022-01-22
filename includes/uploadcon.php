@@ -27,7 +27,12 @@ if (isset($_POST['submitupload'])) {
         $stmnt->bindValue(':title', $title);
         $stmnt->bindValue(':userid', $loggedInID);
         $stmnt->bindValue(':description', $desc);
+
+        //session_start();
+        //$_SESSION['blogposts'] = $blogposts;
+
         $stmnt->execute();
+
         header("Location: ../page2.php");
     } else {
         echo "ERROR";

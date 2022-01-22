@@ -330,9 +330,18 @@ article {
   margin-left: 1000px;
   margin-right: 1000px;
   background-color: rgb(255, 255, 255);
+  padding: 10px;
 }
-.editpost {
-  text-align: right;
+
+.eachpost {
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.postbuttons {
+  display: flex;
+  justify-content: space-around;
 }
 
 /* footer css*/

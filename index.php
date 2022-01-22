@@ -1,10 +1,10 @@
 <?
 session_start();
 include("header.php");
-//include("includes/functions-inc.php");
+include("includes/functions-inc.php");
 
-$loggedInUser = $_SESSION['username'];
-$loggedInID = $_SESSION['userid'];
+$loggedInUser = $_SESSION['user']['username'];
+$loggedInID = $_SESSION['user']['userid'];
 
 //require("config.php");
 ?>
@@ -13,8 +13,12 @@ $loggedInID = $_SESSION['userid'];
 
 <!--main content-->
 <div class="container">
+
+
     <!--side content-->
     <div class="aside-text">
+        <?php echo $loggedInUser;
+        ?>
         <div>Klicka <a href="https://theuselessweb.com/"> <strong>här</strong></a> om du har tråkigt</div>
         <div>Trött på att jobba? Klicka <a href="https://hackertyper.com/"> <strong>här</strong></a> och låt chefen tro att du jobbar</div>
         <div> <a href="https://en.wikipedia.org/wiki/List_of_conspiracy_theories"><strong>Här</strong></a> har du en lista på olika konspirationsteorier...om du fortfarande har tråkigt</div>

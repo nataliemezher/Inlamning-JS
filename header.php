@@ -1,5 +1,5 @@
 <?php
-session_start();
+
 $loggedinUser = $_SESSION['user']['username'];
 $loggedInID = $_SESSION['user']['id'];
 
